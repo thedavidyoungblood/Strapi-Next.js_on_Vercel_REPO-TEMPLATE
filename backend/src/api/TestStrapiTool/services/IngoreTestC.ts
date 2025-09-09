@@ -1,0 +1,5 @@
+/**
+ * IngoreTestC service
+ */
+
+export default () => ({});

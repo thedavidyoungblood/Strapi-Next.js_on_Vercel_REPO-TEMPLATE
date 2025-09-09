@@ -1,0 +1,5 @@
+/**
+ * TestStrapiTool service
+ */
+
+export default () => ({});

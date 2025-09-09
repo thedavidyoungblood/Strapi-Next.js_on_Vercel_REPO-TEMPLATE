@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "frontend": "npm run dev --prefix ../frontend/",
+    "backend": "npm run dev --prefix ../backend/",
+    "clear": "cd frontend && rm -rf .next && rm -rf cache",
+    "setup:frontend": "cd frontend && npm run",
+    "setup:backend": "cd backend && npm run",
+    "setup": "npm run install && npm run setup:frontend && npm run setup:backend",
+    "dev": "npm run clear && concurrently \"cd frontend && npm run dev\" \"cd backend && npm run develop\"",
+    "seed": "cd backend && npm run strapi import -f ../seed-data.tar.gz",
+    "export": "cd backend && npm run strapi export --no-encrypt -f ../seed-data",
+    "repo:upstream": "git fetch upstream && git merge upstream/main"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "npm-check-updates": "^18.1.0"
+  }
+}

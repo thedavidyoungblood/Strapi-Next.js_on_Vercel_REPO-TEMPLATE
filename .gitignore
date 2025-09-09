@@ -1,0 +1,7 @@
+node_modules
+readme-images
+.vscode
+.idea
+.DS_Store
+**/.yarn
+frontend/next.config.ts
