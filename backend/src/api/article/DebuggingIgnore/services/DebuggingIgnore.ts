@@ -1,5 +1,0 @@
-/**
- * DebuggingIgnore service
- */
-
-export default () => ({});
