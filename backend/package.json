@@ -26,14 +26,14 @@
     "@strapi/strapi": "5.23.3",
     "pg": "8.16.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.1.1",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@types/node": "^24",
     "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react-dom": "^19",
     "typescript": "^5"
   },
   "engines": {
