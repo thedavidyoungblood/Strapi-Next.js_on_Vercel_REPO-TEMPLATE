@@ -1,6 +1,6 @@
-import type { Strapi } from '@strapi/strapi';
+import { Core } from '@strapi/types';
 
-const grantPublicRole = async (strapi: Strapi) => {
+const grantPublicRole = async (strapi: Core.Strapi) => {
   const publicRole = await strapi.db.query('plugin::users-permissions.role').findOne({
     where: { type: 'public' },
     populate: ['permissions'],
@@ -37,7 +37,7 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-  register({ strapi }: { strapi: Strapi }) {},
+  register({ strapi }: { strapi: Core.Strapi }) {},
 
   /**
    * An asynchronous bootstrap function that runs before
@@ -46,7 +46,7 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  async bootstrap({ strapi }: { strapi: Strapi }) {
+  async bootstrap({ strapi }: { strapi: Core.Strapi }) {
     await grantPublicRole(strapi);
   },
 };

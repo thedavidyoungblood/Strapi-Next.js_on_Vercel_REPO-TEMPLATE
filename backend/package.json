@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
+  "overrides": {
+    "esbuild": "0.25.9",
+    "koa": "3.0.1",
+    "tmp": "0.2.5"
+  },
   "scripts": {
     "build": "strapi build",
     "console": "strapi console",
